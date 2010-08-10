@@ -44,3 +44,6 @@ alias rmig="rake db:migrate"
 alias rmig19="rake19 db:migrate"
 alias rt="ruby -Itest"
 alias rt19="ruby19 -Itest"
+
+alias cs="RAILS_ENV=selenium cucumber -p selenium"
+alias pgrep="ps -ef | grep $1"
