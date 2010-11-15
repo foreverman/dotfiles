@@ -34,6 +34,7 @@ set virtualedit=all
 
 set incsearch                     " Highlight matches as you type.
 set hlsearch                      " Highlight matches.
+set nohls
 
 set wrap                          " Turn on line wrapping.
 set scrolloff=3                   " Show 3 lines of context around the cursor.
