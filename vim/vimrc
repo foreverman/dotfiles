@@ -87,3 +87,47 @@ map <C-J> <C-W>j<C-W>_
 map <C-K> <C-W>k<C-W>_
 set wmh=0
 
+" Vim functions to run RSpec and Cucumber on the current file and optionally on
+" the spec/scenario under the cursor. Within the context of a Rails app, will
+" prefer script/spec and script/cucumber over their system counterparts.
+function! RailsScriptIfExists(name)
+  if exists("b:rails_root") && filereadable(b:rails_root . "/script/" . a:name)
+    return b:rails_root . "/script/" . a:name
+  else
+    return a:name
+  end
+endfunction
+
+function! RunSpec(args)
+  let spec = RailsScriptIfExists("spec")
+  let cmd = ":! " . spec . " " . a:args . " -c %"
+  echo cmd
+  execute cmd
+endfunction
+
+function! RunCucumber(args)
+  let cucumber = RailsScriptIfExists("cucumber")
+  let cmd = ":! " . cucumber . " %" . a:args
+  echo cmd
+  execute cmd
+endfunction
+
+function! RunTestFile(args)
+  if @% =~ "\.feature$"
+    call RunCucumber("" . a:args)
+  elseif @% =~ "_spec\.rb$"
+    call RunSpec("" . a:args)
+  end
+endfunction
+
+function! RunTest(args)
+  if @% =~ "\.feature$"
+    call RunCucumber(":" . line('.') . a:args)
+  elseif @% =~ "_spec\.rb$"
+    call RunSpec("-l " . line('.') . a:args)
+  end
+endfunction
+map !T :call RunTestFile("")
+map !t :call RunTest("")
+
+color railscasts2
