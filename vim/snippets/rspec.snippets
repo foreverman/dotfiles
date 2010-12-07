@@ -1,0 +1,40 @@
+snippet desc
+	describe "${1:subject}" do
+		${2}
+	end
+
+snippet dest
+	describe ${1:Type} do
+		${2}
+	end
+
+snippet dests
+	describe ${1:Type}, "${2:description}" do
+		${3}
+	end
+
+snippet con
+	context "${1:context}" do
+		${2}
+	end
+
+snippet it
+	it "${1:does something}" do
+		${2}
+	end
+
+snippet its
+	it "should ${1:do something}" do
+		${2}
+	end
+
+snippet bef
+	before(${1::each}) do
+		${2}
+	end
+
+snippet aft
+	after(${1::each}) do
+		${2}
+	end
+
