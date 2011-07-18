@@ -70,6 +70,12 @@ map <leader>tf :tabfirst<cr>
 map <leader>tl :tablast<cr>
 map <leader>tm :tabmove
 
+" For https://github.com/mileszs/ack.vim
+" map Ctrol+p to :cp 
+" map Ctrol+n to :cn
+map <C-p> :cp<cr>
+map <C-n> :cn<cr>
+
 " Uncomment to use Jamis Buck's file opening plugin
 "map <Leader>t :FuzzyFinderTextMate<Enter>
 
