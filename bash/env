@@ -8,3 +8,8 @@ export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/mongodb/bin:$PATH"
 export PATH=/opt/subversion/bin:$PATH
 export PATH=~/bin:$PATH
+
+
+[[ -r $rvm_path/scripts/completion ]] && . $rvm_path/scripts/completion # for RVM completion
+if [ -f `brew --prefix`/etc/bash_completion.d/git-completion.bash ]; then source `brew --prefix`/etc/bash_completion.d/git-completion.bash; fi # for Git completion
+export PS1="\[\033[01;34m\]\$(~/.rvm/bin/rvm-prompt) \[\033[01;32m\]\w\[\033[00;33m\]\$(__git_ps1 \" (%s)\") \[\033[01;36m\]\$\[\033[00m\]"
