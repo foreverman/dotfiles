@@ -9,6 +9,7 @@ export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/mong
 export PATH=/opt/subversion/bin:$PATH
 export PATH=~/bin:$PATH
 
+export JAVA_HOME="/System/Library/Frameworks/JavaVM.framework/Home"
 
 [[ -r $rvm_path/scripts/completion ]] && . $rvm_path/scripts/completion # for RVM completion
 if [ -f `brew --prefix`/etc/bash_completion.d/git-completion.bash ]; then source `brew --prefix`/etc/bash_completion.d/git-completion.bash; fi # for Git completion
