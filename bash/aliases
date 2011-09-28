@@ -47,3 +47,6 @@ alias rt19="ruby19 -Itest"
 
 alias cs="RAILS_ENV=selenium cucumber -p selenium"
 alias pgrep="ps -ef | grep $1"
+
+alias ssh_staging="ssh -i ~/Downloads/DevKeyPari.pem yadmin@ec2-107-20-9-102.compute-1.amazonaws.com"
+alias ssh_production="ssh -i ~/Downloads/YottaaBeta-US-East.pem yadmin@ec2-50-16-24-143.compute-1.amazonaws.com"
