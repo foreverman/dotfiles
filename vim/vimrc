@@ -70,6 +70,9 @@ map <leader>tf :tabfirst<cr>
 map <leader>tl :tablast<cr>
 map <leader>tm :tabmove
 
+" For FuzzyFinderTextMate
+nmap ,t :FuzzyFinderTextMate<CR>
+
 " For https://github.com/mileszs/ack.vim
 " map Ctrol+p to :cp 
 " map Ctrol+n to :cn
