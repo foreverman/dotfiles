@@ -85,17 +85,12 @@ nnoremap <silent> ]Q :clast<CR>
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 
 
-" For FuzzyFinderTextMate
-nmap ,t :FuzzyFinderTextMate<CR>
-
 " For https://github.com/mileszs/ack.vim
 " map Ctrol+p to :cp 
 " map Ctrol+n to :cn
 map <C-p> :cp<cr>
 map <C-n> :cn<cr>
 
-" Uncomment to use Jamis Buck's file opening plugin
-"map <Leader>t :FuzzyFinderTextMate<Enter>
 
 " Controversial...swap colon and semicolon for easier commands
 "nnoremap ; :
