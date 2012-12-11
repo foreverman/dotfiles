@@ -5,6 +5,9 @@ set nocompatible                  " Must come first because it changes other opt
 set history=200
 set showmatch
 
+"map f5 to toggle paste
+set pastetoggle=<f5>
+
 set vb t_vb=
 
 syntax enable                     " Turn on syntax highlighting.
