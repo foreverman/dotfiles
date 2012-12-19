@@ -20,6 +20,9 @@ alias gl="git pull"
 alias gp="git push"
 alias gst="git status"
 alias gco='git checkout'
+#Tab completion for them
+complete -F _git_checkout gco
+
 
 # Ruby
 # Quicker cd gems directory
