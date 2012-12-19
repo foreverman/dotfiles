@@ -51,8 +51,8 @@ alias rt19="ruby19 -Itest"
 alias cs="RAILS_ENV=selenium cucumber -p selenium"
 alias pgrep="ps -ef | grep $1"
 
-alias ssh_production='expect -c '\''spawn ssh -i /Users/liukotami/ssh_keys/Yottaa-Production-Insight.pem yadmin@ec2-23-23-192-108.compute-1.amazonaws.com; send "sudo su - yottaa\ncd /mnt/app/dpu/current/\n\n"; interact'\'''
-alias ssh_staging='expect -c '\''spawn ssh -i /Users/liukotami/ssh_keys/Yottaa-QA.pem yadmin@qa.yottaa.com; send "ssh `nodels dpu@staging`\n"; send "sudo su - yottaa\n"; send "cd /mnt/app/dpu/current\n";interact'\'''
-alias ssh_new='expect -c '\''spawn ssh -i /Users/liukotami/ssh_keys/Yottaa-QA.pem yadmin@qa.yottaa.com; send "ssh `nodels dpu@new-feature`\n"; send "sudo su - yottaa\n"; send "cd /mnt/app/dpu/current\n";interact'\'''
+alias ssh_production='expect -c '\''spawn ssh -i /Users/foreverman/ssh_keys/Yottaa-Production-Insight.pem yadmin@ec2-23-23-192-108.compute-1.amazonaws.com; send "sudo su - yottaa\ncd /mnt/app/dpu/current/\n\n"; interact'\'''
+alias ssh_staging='expect -c '\''spawn ssh -i ~/ssh_keys/Yottaa-QA.pem yadmin@qa.yottaa.com; send "ssh `nodels dpu@staging`\n"; send "sudo su - yottaa\n"; send "cd /mnt/app/dpu/current\n";interact'\'''
+alias ssh_new='expect -c '\''spawn ssh -i ~/ssh_keys/Yottaa-QA.pem yadmin@qa.yottaa.com; send "ssh `nodels dpu@new-feature`\n"; send "sudo su - yottaa\n"; send "cd /mnt/app/dpu/current\n";interact'\'''
 alias ssh_qa="ssh -i ~/ssh_keys/Yottaa-QA.pem root@qa.yottaa.com"
 alias deploy_new="cap new deploy -s skip=1"
