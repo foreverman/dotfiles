@@ -51,8 +51,8 @@ alias rt19="ruby19 -Itest"
 alias cs="RAILS_ENV=selenium cucumber -p selenium"
 alias pgrep="ps -ef | grep $1"
 
-alias ssh_production='expect -c '\''spawn ssh yadmin@ec2-23-23-192-108.compute-1.amazonaws.com; send "sudo su - yottaa\ncd /mnt/app/dpu/current/\n\n"; interact'\'''
-alias ssh_staging='expect -c '\''spawn ssh  yadmin@qa.yottaa.com; send "ssh `nodels dpu@staging`\n"; send "sudo su - yottaa\n"; send "cd /mnt/app/dpu/current\n";interact'\'''
-alias ssh_new='expect -c '\''spawn ssh  yadmin@qa.yottaa.com; send "ssh `nodels dpu@new-feature`\n"; send "sudo su - yottaa\n"; send "cd /mnt/app/dpu/current\n";interact'\'''
+alias ssh_production='expect -c '\''spawn ssh production; send "sudo su - yottaa\ncd /mnt/app/dpu/current/\n\n"; interact'\'''
+alias ssh_staging='expect -c '\''spawn ssh qa; send "ssh `nodels dpu@staging`\n"; send "sudo su - yottaa\n"; send "cd /mnt/app/dpu/current\n";interact'\'''
+alias ssh_new='expect -c '\''spawn ssh qa; send "ssh `nodels dpu@new-feature`\n"; send "sudo su - yottaa\n"; send "cd /mnt/app/dpu/current\n";interact'\'''
 alias ssh_qa="ssh root@qa.yottaa.com"
 alias deploy_new="cap new deploy -s skip=1"

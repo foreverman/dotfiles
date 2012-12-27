@@ -1,5 +1,9 @@
-IdentityFile ~/ssh_keys/Yottaa-Production-Insight.pem
+Host production
+  HostName ec2-23-23-192-108.compute-1.amazonaws.com 
+  User yadmin
+  IdentityFile ~/ssh_keys/Yottaa-Production-Insight.pem
 
-Host qa.yottaa.com
+Host qa
+  HostName qa.yottaa.com
   User yadmin
   IdentityFile ~/ssh_keys/Yottaa-QA.pem
