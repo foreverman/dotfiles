@@ -1,5 +1,4 @@
-export EDITOR="mate -w"
-#export EDITOR="~/bin/vim"
+export EDITOR="vim"
 
 # MacPorts Installer addition on 2009-09-07_at_22:57:54: adding an appropriate PATH variable for use with MacPorts.
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
