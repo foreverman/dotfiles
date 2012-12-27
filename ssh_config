@@ -1,0 +1,5 @@
+IdentityFile ~/ssh_keys/Yottaa-Production-Insight.pem
+
+Host qa.yottaa.com
+  User yadmin
+  IdentityFile ~/ssh_keys/Yottaa-QA.pem
