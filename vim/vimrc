@@ -86,6 +86,7 @@ nnoremap <silent> [Q :cfirst<CR>
 nnoremap <silent> ]Q :clast<CR>
 
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
+cmap w!! %!sudo tee > /dev/null %
 
 " For https://github.com/mileszs/ack.vim
 " map Ctrol+p to :cp 
