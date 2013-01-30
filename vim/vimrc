@@ -2,7 +2,7 @@
 " Copy or symlink to ~/.vimrc or ~/_vimrc.
 
 set nocompatible                  " Must come first because it changes other options.
-set history=200
+set history=1000
 set showmatch
 
 "map f5 to toggle paste
@@ -86,7 +86,10 @@ nnoremap <silent> [Q :cfirst<CR>
 nnoremap <silent> ]Q :clast<CR>
 
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
-cmap w!! %!sudo tee > /dev/null %
+command W w !sudo tee % > /dev/null
+let mapleader=","
+nnoremap ' `
+nnoremap ` '
 
 " For https://github.com/mileszs/ack.vim
 " map Ctrol+p to :cp 
