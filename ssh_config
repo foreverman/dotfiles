@@ -1,5 +1,5 @@
 Host production
-  HostName ec2-23-23-192-108.compute-1.amazonaws.com 
+  HostName ec2-50-18-125-82.us-west-1.compute.amazonaws.com
   User yadmin
   IdentityFile ~/ssh_keys/Yottaa-Production-Insight.pem
 
@@ -7,3 +7,8 @@ Host qa
   HostName qa.yottaa.com
   User yadmin
   IdentityFile ~/ssh_keys/Yottaa-QA.pem
+
+Host github-yottaa
+  HostName github.com
+  User git
+  IdentityFile ~/ssh_keys/github_yottaa

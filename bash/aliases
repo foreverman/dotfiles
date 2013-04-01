@@ -56,3 +56,5 @@ alias ssh_staging='expect -c '\''spawn ssh qa; send "ssh `nodels dpu@staging`\n"
 alias ssh_new='expect -c '\''spawn ssh qa; send "ssh `nodels dpu@new-feature`\n"; send "sudo su - yottaa\n"; send "cd /mnt/app/dpu/current\n";interact'\'''
 alias ssh_qa="ssh root@qa.yottaa.com"
 alias deploy_new="cap new deploy -s skip=1"
+alias bi="bundle install"
+alias be="bundle exec"
