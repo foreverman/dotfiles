@@ -7,6 +7,10 @@ function t10 {
 		head
 }
 
+function clean_vim {
+  find . -name "*.swo" -exec rm {} \;
+  find . -name "*.swp" -exec rm {} \;
+}
 # processes
 alias tu="top -o cpu"
 alias tm="top -o vsize"
