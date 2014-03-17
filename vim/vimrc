@@ -10,7 +10,6 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-rails.git'
 Bundle 'vim-ruby/vim-ruby'
-" Bundle 'wincent/Command-T'
 Bundle 'mileszs/ack.vim'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-fugitive'
@@ -27,6 +26,8 @@ Bundle 'bufexplorer.zip'
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
 Bundle "garbas/vim-snipmate"
+Bundle "kien/ctrlp.vim"
+Bundle "ecomba/vim-ruby-refactoring"
 
 set history=1000
 set showmatch
@@ -184,3 +185,4 @@ set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 autocmd BufNewFile,BufRead ~/workspace/dpu/* set wildignore+=public/**
 
 color railscasts
+
