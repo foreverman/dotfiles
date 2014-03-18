@@ -28,6 +28,8 @@ Bundle "tomtom/tlib_vim"
 Bundle "garbas/vim-snipmate"
 Bundle "kien/ctrlp.vim"
 Bundle "ecomba/vim-ruby-refactoring"
+Bundle "epmatsw/ag.vim"
+
 
 set history=1000
 set showmatch
@@ -123,6 +125,8 @@ nnoremap ` '
 " map Ctrol+n to :cn
 map <C-p> :cp<cr>
 map <C-n> :cn<cr>
+
+let g:ctrlp_map = '<leader>t'
 
 
 " Controversial...swap colon and semicolon for easier commands
