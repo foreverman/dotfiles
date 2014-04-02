@@ -127,6 +127,7 @@ map <C-p> :cp<cr>
 map <C-n> :cn<cr>
 
 let g:ctrlp_map = '<leader>t'
+let g:ctrlp_dont_split = 'nerdtree'
 
 
 " Controversial...swap colon and semicolon for easier commands

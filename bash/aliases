@@ -11,6 +11,13 @@ function clean_vim {
   find . -name "*.swo" -exec rm {} \;
   find . -name "*.swp" -exec rm {} \;
 }
+
+function find. {
+  find . \( -type d ! -name . -prune \) -o \( "$@" -print \)
+}
+function find.ls {
+  find . \( -type d ! -name . -prune \) -o \( "$@" -ls \)
+}
 # processes
 alias tu="top -o cpu"
 alias tm="top -o vsize"
