@@ -31,7 +31,6 @@ alias gl="git pull"
 alias gp="git push"
 alias gst="git status"
 alias gco='git checkout'
-__git_complete gco _git_checkout
 
 
 # Ruby

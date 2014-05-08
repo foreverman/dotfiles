@@ -39,5 +39,3 @@ BCYAN='\e[46m'
 BWHITE='\e[47m'
 
 #PS1="\n\u:\w \[$EBLACK\]\$(vcprompt)\[$NO_COLOR\] \n→ "
-source ~/bin/dotfiles/bash/git-completion.bash
-complete -C ~/bin/dotfiles/bash/rake-completion -o default rake
