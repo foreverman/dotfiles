@@ -18,6 +18,10 @@ function find. {
 function find.ls {
   find . \( -type d ! -name . -prune \) -o \( "$@" -ls \)
 }
+
+#Unix commands
+alias mkdir='mkdir -p'
+
 # processes
 alias tu="top -o cpu"
 alias tm="top -o vsize"
