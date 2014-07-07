@@ -195,4 +195,4 @@ set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 autocmd BufNewFile,BufRead ~/workspace/dpu/* set wildignore+=public/**
 
 color railscasts
-
+set wildignore+=*.pyc,*.pyo
