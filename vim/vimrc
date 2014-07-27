@@ -27,7 +27,7 @@ Plugin 'bufexplorer.zip'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
-Plugin 'kien/ctrlp.vim'
+Plugin 'wincent/command-t'
 Plugin 'ecomba/vim-ruby-refactoring'
 Plugin 'epmatsw/ag.vim'
 
@@ -131,8 +131,8 @@ nnoremap ` '
 map <C-p> :cp<cr>
 map <C-n> :cn<cr>
 
-let g:ctrlp_map = '<leader>t'
-let g:ctrlp_dont_split = 'nerdtree'
+" let g:ctrlp_map = '<leader>t'
+" let g:ctrlp_dont_split = 'nerdtree'
 
 
 " Controversial...swap colon and semicolon for easier commands
