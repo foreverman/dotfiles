@@ -27,10 +27,11 @@ Plugin 'bufexplorer.zip'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
+Plugin 'tpope/vim-rvm'
 Plugin 'wincent/command-t'
 Plugin 'ecomba/vim-ruby-refactoring'
 Plugin 'epmatsw/ag.vim'
-Plugin 'klen/python-mode'
+" Plugin 'klen/python-mode'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -157,6 +158,7 @@ autocmd BufReadPost fugitive://* set bufhidden=delete
 "Add git branch to status line
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 autocmd BufNewFile,BufRead ~/workspace/dpu/* set wildignore+=public/**
+autocmd VimEnter * Rvm use system
 
 color railscasts
 set wildignore+=*.pyc,*.pyo
