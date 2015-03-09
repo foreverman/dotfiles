@@ -81,8 +81,9 @@ set title                         " Set the terminal's title
 
 set visualbell                    " No beeping.
 
-set nobackup                      " Don't make a backup before overwriting a file.
-set nowritebackup                 " And again.
+set noswapfile
+" set nobackup                      " Don't make a backup before overwriting a file.
+" set nowritebackup                 " And again.
 
 " https://github.com/tpope/vim-fugitive/issues/9
 " set directory=$HOME/.vim/tmp//,.  " Keep swap files in one location
@@ -149,44 +150,6 @@ map <C-n> :cn<cr>
 map <C-J> <C-W>j<C-W>_
 map <C-K> <C-W>k<C-W>_
 set wmh=0
-
-function! RunCurrentSpecFile()
-  if InSpecFile()
-    let l:command = "bundle exec rspec " . @% . " -f documentation"
-    call SetLastSpecCommand(l:command)
-    call RunSpecs(l:command)
-  endif
-endfunction
-
-function! RunNearestSpec()
-  if InSpecFile()
-    let l:command = "bundle exec rspec " . @% . " -l " . line(".") . " -f documentation"
-    call SetLastSpecCommand(l:command)
-    call RunSpecs(l:command)
-  endif
-endfunction
-
-function! RunLastSpec()
-  if exists("t:last_spec_command")
-    call RunSpecs(t:last_spec_command)
-  endif
-endfunction
-
-function! InSpecFile()
-  return match(expand("%"), "_spec.rb$") != -1
-endfunction
-
-function! SetLastSpecCommand(command)
-  let t:last_spec_command = a:command
-endfunction
-
-function! RunSpecs(command)
-  execute ":w\|!clear && echo " . a:command . " && echo && " . a:command
-endfunction
-
-map !t :call RunCurrentSpecFile()
-map !s :call RunNearestSpec()
-map !l :call RunLastSpec()
 
 "http://vimcasts.org/episodes/fugitive-vim-browsing-the-git-object-database/
 "Auto-clean fugitive buffers
