@@ -123,7 +123,6 @@ nnoremap <silent> [Q :cfirst<CR>
 nnoremap <silent> ]Q :clast<CR>
 
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
-command W w !sudo tee % > /dev/null
 let mapleader=","
 nnoremap ' `
 nnoremap ` '
