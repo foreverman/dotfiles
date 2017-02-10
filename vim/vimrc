@@ -30,7 +30,8 @@ Plugin 'garbas/vim-snipmate'
 Plugin 'tpope/vim-rvm'
 Plugin 'wincent/command-t'
 Plugin 'ecomba/vim-ruby-refactoring'
-Plugin 'epmatsw/ag.vim'
+Plugin 'rking/ag.vim'
+Plugin 'nelstrom/vim-visual-star-search'
 " Plugin 'klen/python-mode'
 
 " All of your Plugins must be added before the following line
